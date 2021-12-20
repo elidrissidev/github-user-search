@@ -8,7 +8,7 @@ afterEach(() => {
 describe('ThemeToggle', () => {
   it('has the proper title and icon based on the current theme', () => {
     // dark mode is active
-    jest.spyOn(Storage.prototype, 'getItem').mockImplementation(() => 'true')
+    jest.spyOn(Storage.prototype, 'getItem').mockReturnValue('true')
 
     render(<ThemeToggle />)
 
@@ -19,7 +19,7 @@ describe('ThemeToggle', () => {
 
   it('saves the new theme in localStorage', () => {
     // dark mode is not active initially
-    jest.spyOn(Storage.prototype, 'getItem').mockImplementation(() => 'false')
+    jest.spyOn(Storage.prototype, 'getItem').mockReturnValue('false')
     jest.spyOn(Storage.prototype, 'setItem')
 
     render(<ThemeToggle />)

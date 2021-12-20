@@ -28,4 +28,15 @@ describe('ThemeToggle', () => {
 
     expect(global.localStorage.setItem).toHaveBeenCalledWith(THEME_KEY, 'true')
   })
+
+  it('toggles the dark theme class on the html element', () => {
+    // dark mode is not active initially
+    jest.spyOn(Storage.prototype, 'getItem').mockReturnValue('false')
+
+    render(<ThemeToggle />)
+
+    fireEvent.click(screen.getByRole('button'))
+
+    expect(document.documentElement).toHaveClass('dark')
+  })
 })

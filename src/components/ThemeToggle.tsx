@@ -4,6 +4,7 @@ import IconMoon from '../svg/IconMoon'
 import IconSun from '../svg/IconSun'
 
 export const THEME_KEY = 'darkTheme'
+export const DARK_THEME_CLASS = 'dark'
 
 export function ThemeToggle() {
   const [isDarkTheme, setIsDarkTheme] = useState(() => {
@@ -12,6 +13,10 @@ export function ThemeToggle() {
 
   useEffect(() => {
     window.localStorage.setItem(THEME_KEY, isDarkTheme.toString())
+  }, [isDarkTheme])
+
+  useEffect(() => {
+    document.documentElement.classList.toggle(DARK_THEME_CLASS, isDarkTheme)
   }, [isDarkTheme])
 
   return (

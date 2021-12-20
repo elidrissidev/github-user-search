@@ -6,7 +6,7 @@ type HeaderProps = {
   title: string
 }
 
-function Header({ title }: HeaderProps) {
+export function Header({ title }: HeaderProps) {
   return (
     <header className="Header">
       <h1 className="Header-title">{title}</h1>
@@ -18,5 +18,3 @@ function Header({ title }: HeaderProps) {
 Header.defaultProps = {
   title: process.env.REACT_APP_APP_NAME,
 }
-
-export default Header

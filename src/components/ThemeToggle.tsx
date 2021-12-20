@@ -1,14 +1,18 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './ThemeToggle.css'
 import IconMoon from '../svg/IconMoon'
 import IconSun from '../svg/IconSun'
 
-const THEME_KEY = 'darkTheme'
+export const THEME_KEY = 'darkTheme'
 
-function ThemeToggle() {
+export function ThemeToggle() {
   const [isDarkTheme, setIsDarkTheme] = useState(() => {
     return window.localStorage.getItem(THEME_KEY) === 'true'
   })
+
+  useEffect(() => {
+    window.localStorage.setItem(THEME_KEY, isDarkTheme.toString())
+  }, [isDarkTheme])
 
   return (
     <button
@@ -33,5 +37,3 @@ function ThemeToggle() {
     </button>
   )
 }
-
-export default ThemeToggle

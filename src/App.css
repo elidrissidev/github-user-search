@@ -1,7 +1,7 @@
 .App {
   background-color: var(--bg-color);
   min-height: 100vh;
-  padding: 1.9375rem 2rem 0;
+  padding: 1.9375rem 1.5rem 0;
 }
 
 .visually-hidden {

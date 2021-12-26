@@ -9,6 +9,11 @@
   padding-left: 1rem;
 }
 
+.UserSearch-icon {
+  height: 1.25rem;
+  width: 1.25rem;
+}
+
 .UserSearch-input {
   background-color: transparent;
   border: none;
@@ -46,4 +51,27 @@
 
 .UserSearch-submit:hover {
   background-color: var(--primary-light-color);
+}
+
+@media (min-width: 768px) {
+  .UserSearch {
+    margin-bottom: 1.5rem;
+    padding: 0.625rem;
+    padding-left: 2rem;
+  }
+
+  .UserSearch-icon {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+
+  .UserSearch-input {
+    font-size: 1.125rem;
+    margin: 0 1.5rem;
+  }
+
+  .UserSearch-submit {
+    font-size: 1rem;
+    padding: 0.8125rem 1.5rem;
+  }
 }

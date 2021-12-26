@@ -20,7 +20,7 @@ export function UserSearch({ onUsernameSubmit }: UserSearchProps) {
       <label htmlFor="search" className="visually-hidden">
         Search GitHub username
       </label>
-      <IconSearch height="20" width="20" aria-hidden="true" />
+      <IconSearch className="UserSearch-icon" aria-hidden="true" />
       <input
         type="text"
         id="search"

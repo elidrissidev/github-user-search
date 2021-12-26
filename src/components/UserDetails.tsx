@@ -60,6 +60,7 @@ export function UserDetails({ user }: UserDetailsProps) {
         <ul className="UserDetails-footer-details">
           <li
             className="footer-detail-item"
+            title="Location"
             style={{ opacity: user.location ? 1 : 0.5 }}
           >
             <IconLocation />
@@ -67,6 +68,7 @@ export function UserDetails({ user }: UserDetailsProps) {
           </li>
           <li
             className="footer-detail-item"
+            title="Blog"
             style={{ opacity: user.blog ? 1 : 0.5 }}
           >
             <IconWebsite />
@@ -80,6 +82,7 @@ export function UserDetails({ user }: UserDetailsProps) {
           </li>
           <li
             className="footer-detail-item"
+            title="Twitter username"
             style={{ opacity: user.twitter_username ? 1 : 0.5 }}
           >
             <IconTwitter />
@@ -95,6 +98,7 @@ export function UserDetails({ user }: UserDetailsProps) {
           </li>
           <li
             className="footer-detail-item"
+            title="Company"
             style={{ opacity: user.company ? 1 : 0.5 }}
           >
             <IconCompany />

@@ -17,5 +17,6 @@
   .App {
     max-width: 35.8125rem;
     margin: 0 auto;
+    padding: 8.75rem 0 2rem;
   }
 }

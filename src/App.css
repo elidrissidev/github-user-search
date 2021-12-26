@@ -20,3 +20,10 @@
     padding: 8.75rem 0 2rem;
   }
 }
+
+@media (min-width: 1024px) {
+  .App {
+    max-width: 45.625rem;
+    padding-top: 9rem;
+  }
+}

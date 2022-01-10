@@ -7,10 +7,33 @@ import IconTwitter from '../svg/IconTwitter'
 import IconCompany from '../svg/IconCompany'
 
 type UserDetailsProps = {
-  user: User
+  user: User | null
+  showLoading: boolean
 }
 
-export function UserDetails({ user }: UserDetailsProps) {
+export function UserDetails({ user, showLoading }: UserDetailsProps) {
+  if (showLoading && !user) {
+    return (
+      <section
+        className="UserDetails"
+        style={{ display: 'block', textAlign: 'center' }}
+      >
+        <em style={{ color: 'var(--text-color)' }}>Loading...</em>
+      </section>
+    )
+  }
+
+  if (!user?.login) {
+    return (
+      <section
+        className="UserDetails"
+        style={{ display: 'block', textAlign: 'center' }}
+      >
+        <em style={{ color: 'var(--text-color)' }}>User not found</em>
+      </section>
+    )
+  }
+
   const joinDate = new Date(user.created_at).toLocaleString('en-US', {
     dateStyle: 'medium',
   })

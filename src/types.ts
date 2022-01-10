@@ -1,3 +1,7 @@
+interface ErrorResponse {
+  message: string
+}
+
 export interface User {
   login: string
   avatar_url: string
@@ -12,3 +16,5 @@ export interface User {
   following: number
   created_at: string
 }
+
+export type GitHubResponse = User | ErrorResponse

@@ -4,9 +4,10 @@ import IconSearch from '../svg/IconSearch'
 
 type UserSearchProps = {
   onUsernameSubmit: (username: string) => void
+  error?: boolean
 }
 
-export function UserSearch({ onUsernameSubmit }: UserSearchProps) {
+export function UserSearch({ onUsernameSubmit, error }: UserSearchProps) {
   const [username, setUsername] = useState('')
 
   return (
@@ -29,7 +30,7 @@ export function UserSearch({ onUsernameSubmit }: UserSearchProps) {
         value={username}
         onChange={(e) => setUsername(e.target.value)}
       />
-      {/* <span className="UserSearch-error">No results</span> */}
+      {error && <span className="UserSearch-error">No results</span>}
       <button type="submit" className="UserSearch-submit">
         Search
       </button>

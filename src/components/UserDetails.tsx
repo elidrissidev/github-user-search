@@ -59,11 +59,20 @@ export function UserDetails({ user, showLoading }: UserDetailsProps) {
           <div className="UserDetails-header-details">
             <div className="UserDetails-name-wrapper">
               <h2 className="UserDetails-name">{user.name}</h2>
-              <time className="UserDetails-joindate" dateTime={user.created_at}>
+              <time
+                className="UserDetails-joindate"
+                dateTime={user.created_at}
+                data-testid="user-info-joindate"
+              >
                 Joined {joinDate}
               </time>
             </div>
-            <span className="UserDetails-username">@{user.login}</span>
+            <span
+              className="UserDetails-username"
+              data-testid="user-info-username"
+            >
+              @{user.login}
+            </span>
             <time
               className="UserDetails-mobilejoindate"
               dateTime={user.created_at}
@@ -72,7 +81,7 @@ export function UserDetails({ user, showLoading }: UserDetailsProps) {
             </time>
           </div>
         </div>
-        <p className="UserDetails-bio">
+        <p className="UserDetails-bio" data-testid="user-info-bio">
           {user.bio ?? (
             <span style={{ opacity: 0.75 }}>This profile has no bio</span>
           )}
@@ -80,15 +89,21 @@ export function UserDetails({ user, showLoading }: UserDetailsProps) {
         <ul className="UserDetails-stats">
           <li className="UserDetails-stat">
             <h3 className="stat-title">Repos</h3>
-            <span className="stat-value">{user.public_repos}</span>
+            <span className="stat-value" data-testid="user-info-repos">
+              {user.public_repos}
+            </span>
           </li>
           <li className="UserDetails-stat">
             <h3 className="stat-title">Followers</h3>
-            <span className="stat-value">{user.followers}</span>
+            <span className="stat-value" data-testid="user-info-followers">
+              {user.followers}
+            </span>
           </li>
           <li className="UserDetails-stat">
             <h3 className="stat-title">Following</h3>
-            <span className="stat-value">{user.following}</span>
+            <span className="stat-value" data-testid="user-info-following">
+              {user.following}
+            </span>
           </li>
         </ul>
         <div className="UserDetails-footer">

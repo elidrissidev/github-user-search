@@ -1,0 +1,91 @@
+.UserSearch {
+  align-items: center;
+  background-color: var(--card-bg-color);
+  border-radius: 0.9375rem;
+  box-shadow: 0px 16px 30px -10px var(--card-shadow-color);
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2.25rem 0 1rem;
+  padding: 0.4375rem;
+  padding-left: 1rem;
+}
+
+.UserSearch-icon {
+  height: 1.25rem;
+  width: 1.25rem;
+}
+
+.UserSearch-input {
+  background-color: transparent;
+  border: none;
+  color: var(--text-color);
+  flex: 1;
+  font-family: inherit;
+  font-size: 0.8125rem;
+  line-height: 25px;
+  margin: 0 0.4375rem;
+  min-width: 0;
+  outline: none;
+}
+
+.UserSearch-input::placeholder {
+  color: inherit;
+}
+
+.UserSearch-error {
+  color: var(--error-color);
+  display: none;
+  font-size: 0.9375rem;
+  font-weight: bold;
+  margin-right: 1.5rem;
+}
+
+.UserSearch-submit {
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 0.625rem;
+  color: #fff;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: bold;
+  padding: 0.75rem 1rem;
+}
+
+.UserSearch-submit:hover {
+  background-color: var(--primary-light-color);
+}
+
+.error {
+  color: var(--error-color);
+  font-weight: bold;
+  margin: 0;
+  margin-left: 3rem;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .UserSearch {
+    margin-bottom: 1.5rem;
+    padding: 0.625rem;
+    padding-left: 2rem;
+  }
+
+  .UserSearch-icon {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+
+  .UserSearch-input {
+    font-size: 1.125rem;
+    margin: 0 1.5rem;
+  }
+
+  .UserSearch-error {
+    display: inline-block;
+  }
+
+  .UserSearch-submit {
+    font-size: 1rem;
+    padding: 0.8125rem 1.5rem;
+  }
+}

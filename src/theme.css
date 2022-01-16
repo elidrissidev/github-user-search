@@ -1,0 +1,20 @@
+:root {
+  --bg-color: #f6f8ff;
+  --primary-color: #0079ff;
+  --primary-light-color: #60abff;
+  --error-color: #f74646;
+  --card-bg-color: #fefefe;
+  --card-shadow-color: #4660bb33;
+  --heading-color: #2b3442;
+  --text-color: #4b6a9b;
+  --text-hover-color: #222731;
+}
+
+.dark {
+  --bg-color: #141d2f;
+  --card-bg-color: #1e2a47;
+  --card-shadow-color: transparent;
+  --heading-color: #ffffff;
+  --text-color: #ffffff;
+  --text-hover-color: #90a4d4;
+}

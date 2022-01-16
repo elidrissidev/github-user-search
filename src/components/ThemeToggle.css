@@ -1,0 +1,22 @@
+.ThemeToggle {
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  color: var(--text-color);
+  cursor: pointer;
+  display: flex;
+  font-family: inherit;
+}
+
+.ThemeToggle:hover,
+.ThemeToggle:focus {
+  color: var(--text-hover-color);
+}
+
+.ThemeToggle-title {
+  font-size: 0.8125rem;
+  font-weight: bold;
+  letter-spacing: 0.15rem;
+  margin-right: 1rem;
+  text-transform: uppercase;
+}

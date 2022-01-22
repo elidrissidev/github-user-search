@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useLayoutEffect, useState } from 'react'
 import './ThemeToggle.css'
 import IconMoon from '../svg/IconMoon'
 import IconSun from '../svg/IconSun'
@@ -15,7 +15,7 @@ export function ThemeToggle() {
     window.localStorage.setItem(THEME_KEY, isDarkTheme.toString())
   }, [isDarkTheme])
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     document.documentElement.classList.toggle(DARK_THEME_CLASS, isDarkTheme)
   }, [isDarkTheme])
 
